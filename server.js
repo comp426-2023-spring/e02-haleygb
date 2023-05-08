@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //// Load most basic dependencies
 // Create require function 
 // https://nodejs.org/docs/latest-v18.x/api/module.html#modulecreaterequirefilename

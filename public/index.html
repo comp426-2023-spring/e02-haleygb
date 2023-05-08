@@ -2,11 +2,28 @@
     <head>
         <title>Rock</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+
+    <div class=container>
+
+        <div id="reset" class="active">
+            <h1>Play Rock Paper Scissors or Rock Paper Scissors Lizard Spock!</h1>
+            <p>Choose which game you would like to play:</p>
+        </div>
+
+
+        <nav>
+            <button id="reset" onclick="reset()" class="active">Reset</button>
+            <button id="play" onclick="play()" class = "active">Play Game</button>
+            <button id="rules" onclick="gameRules()" class = "active">Game Rules</button>
+        </nav>
+    </div>
 
     </body>
 </html>
