@@ -14,10 +14,52 @@
 
         <div id="reset" class="active">
             <h1>Play Rock Paper Scissors or Rock Paper Scissors Lizard Spock!</h1>
-            <p>Choose which game you would like to play:</p>
+            <h3>Choose which game you would like to play:</h3>
+            <p>Click "Game Rules" for more information.</p>
+            <input type="radio" id="playRPS" name = "game" onclick="chooseRPS()">
+            <label for="playRPS">Play Rock Paper Scissors!</label>
+            <br>
+            <br>
+            <input type = "radio" id="playRPSLS" name = "game" onclick="chooseRPSLS()">
+            <label for="playRPSLS">Play Rock Paper Scissors Lizard Spock!</label>
         </div>
 
 
+        <div id="opponentRPSLS" class="inactive">
+            <h3>Would you like to play with an opponent?</h3>
+            <p>If so, choose an shot below and play against the computer.</p>
+
+            <label for="opponents">Choose your shot:</label>
+            <select name="opponents" id="opponents">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+                <option value="lizard">Lizard</option>
+                <option value="spock">Spock</option>
+            </select>
+            <!-- <input type="submit" value="Lock In Opponent"> -->
+            <button id="submitOpponent" onclick="setOpponent()">Lock In Your Move</button>
+        </div>
+
+        <div id="opponentRPS" class="inactive">
+            <h3>Would you like to play with an opponent?</h3>
+            <p>If so, choose an shot below and play against the computer.</p>
+
+            <label for="opponents1">Choose your shot:</label>
+            <select name="opponents" id="opponents">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+            <button id="submitOpponent" onclick="setOpponent()">Lock In Your Moves</button>
+            <!-- <input type="submit" value="Lock In Opponent"> -->
+        </div>
+
+
+
+        <br>
+        <br>
+        <br>
         <nav>
             <button id="reset" onclick="reset()" class="active">Reset</button>
             <button id="play" onclick="play()" class = "active">Play Game</button>
