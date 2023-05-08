@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
     <head>
-        <title>Rock</title>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
         <script src="scripts.js"></script>
         <link rel="stylesheet" href="styles.css">
@@ -11,7 +13,7 @@
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
 
     <div class=container>
-        <div id="reset" class="active">
+        <div id="mainPage" class="active">
             <h1>Play Rock Paper Scissors or Rock Paper Scissors Lizard Spock!</h1>
             <h3>Choose which game you would like to play:</h3>
             <p>Click "Game Rules" for more information.</p>
@@ -70,15 +72,12 @@
         <div id="showRules" class="inactive">
             <div class="row">
             <div class="column">
-                <p>
                 <h3>Rules for Rock Paper Scissors:</h3>
                 - Scissors CUTS Paper<br>
                 - Paper COVERS Rock<br>
-                - Rock CRUSHES Scissors<br>
-                </p>
+                - Rock CRUSHES Scissors
             </div>
             <div class="column">
-                <p>
                 <h3>Rules for the Lizard-Spock Expansion of Rock Paper Scissors:</h3>
                 - Scissors CUTS Paper<br>
                 - Paper COVERS Rock<br>
@@ -89,8 +88,7 @@
                 - Lizard EATS Paper<br>
                 - Paper DISPROVES Spock<br>
                 - Spock VAPORIZES Rock<br>
-                - Rock CRUSHES Scissors<br>
-                </p>
+                - Rock CRUSHES Scissors
             </div>
         </div>
             <button id="hide" onclick="hide()" class="inactive">Hide</button>
