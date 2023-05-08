@@ -27,6 +27,13 @@ async function setOpponent() {
 
 }
 
+async function setOpponent2() {
+    let shot = document.getElementById("opponents2");
+    console.log(shot.value)
+    playerChoice = String(shot.value);
+
+}
+
 async function reset() {
     location.reload()
 }
@@ -96,18 +103,3 @@ async function playOpponent(url) {
 
 
 }
-
-
-
-
-
-// const endpoint = "app/"
-//     const url = document.baseURI+endpoint
-//     await fetch(url)
-//         .then(function(response) {
-//             return response.text();
-//         })
-//             .then(function(result){
-//                 console.log(result);
-//             })
-
