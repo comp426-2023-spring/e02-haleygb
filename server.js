@@ -3,6 +3,7 @@
 // Create require function 
 // https://nodejs.org/docs/latest-v18.x/api/module.html#modulecreaterequirefilename
 import { createRequire } from 'node:module';
+import { rpsls, rps} from "./lib/rpsls.js";
 const require = createRequire(import.meta.url);
 // The above two lines allow us to use ES methods and CJS methods for loading
 // dependencies.
@@ -103,3 +104,52 @@ process.on('SIGINT', () => {
         }    
     })
 })
+
+
+// generic route that just returns status code
+app.get("/app/", (req, res) => {
+    res.status(200).send("200 OK").end();});
+
+
+// play rps without an opponenet
+app.get("/app/rps", (req, res) => {
+    res.status(200).send(rps()).end();});
+
+// play rpsls without an opponent
+app.get("/app/rpsls", (req, res) => {
+    res.status(200).send(rpsls()).end();});
+
+// play rps with an opponent - info comes from a request body (req.query.shot)
+app.get('/app/rps/play', (req, res) => {
+    res.status(200).send(rps(req.query.shot)).end();});
+
+// play rps with an opponent JSON
+app.post('/app/rps/play', (req, res) => {
+    res.status(200).send(rps(req.body.shot)).end();});
+
+// play rpsls with an opponent - info comes from a request body (req.query.shot)
+app.get('/app/rpsls/play', (req, res) => {
+    res.status(200).send(rpsls(req.query.shot)).end();});
+
+// play rpsls with an opponent JSON
+app.post('/app/rpsls/play', (req, res) => {
+    res.status(200).send(rpsls(req.body.shot)).end();});
+
+// play rps with an opponent - info comes from route - restrict params to (rock|paper|scissors)
+app.get("/app/rps/play/:shot", (req, res) => {
+    res.status(200).send(rps(req.params.shot)).end();});
+
+// play rps with an opponent - info comes from route - restrict params to (rock|paper|scissors|lizard|spock)
+app.get("/app/rpsls/play/:shot", (req, res) => {
+    res.status(200).send(rpsls(req.params.shot)).end();});
+
+// create a default route that sends a 404 status
+app.get('*', (req, res) => {
+    res.status(404).send("404 NOT FOUND").end();});
+
+
+
+
+
+
+

@@ -11,7 +11,6 @@
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
 
     <div class=container>
-
         <div id="reset" class="active">
             <h1>Play Rock Paper Scissors or Rock Paper Scissors Lizard Spock!</h1>
             <h3>Choose which game you would like to play:</h3>
@@ -55,16 +54,55 @@
             <!-- <input type="submit" value="Lock In Opponent"> -->
         </div>
 
-
-
         <br>
         <br>
         <br>
         <nav>
             <button id="reset" onclick="reset()" class="active">Reset</button>
             <button id="play" onclick="play()" class = "active">Play Game</button>
-            <button id="rules" onclick="gameRules()" class = "active">Game Rules</button>
+            <button id="rules" onclick="rules()" class = "active">Game Rules</button>
         </nav>
+
+
+        <div id="showRules" class="inactive">
+            <div class="row">
+            <div class="column">
+                <p>
+                <h3>Rules for Rock Paper Scissors:</h3>
+                - Scissors CUTS Paper<br>
+                - Paper COVERS Rock<br>
+                - Rock CRUSHES Scissors<br>
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                <h3>Rules for the Lizard-Spock Expansion of Rock Paper Scissors:</h3>
+                - Scissors CUTS Paper<br>
+                - Paper COVERS Rock<br>
+                - Rock SMOOSHES Lizard<br>
+                - Lizard POISONS Spock<br>
+                - Spock SMASHES Scissors<br>
+                - Scissors DECAPITATES Lizard<br>
+                - Lizard EATS Paper<br>
+                - Paper DISPROVES Spock<br>
+                - Spock VAPORIZES Rock<br>
+                - Rock CRUSHES Scissors<br>
+                </p>
+            </div>
+        </div>
+            <button id="hide" onclick="hide()" class="inactive">Hide</button>
+        </div>
+
+
+        <div id="results" class="inactive">
+        <h2>Results</h2>
+
+          <p id="player"></p>
+          <p id="computer"></p>
+          <p id="gameResults"></p>
+          <p id="warning"></p>
+
+        </div>
     </div>
 
     </body>

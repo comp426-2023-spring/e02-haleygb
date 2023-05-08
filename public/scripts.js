@@ -23,7 +23,91 @@ async function chooseRPSLS() {
 async function setOpponent() {
     let shot = document.getElementById("opponents");
     console.log(shot.value)
-    playerChoice = shot.value;
+    playerChoice = String(shot.value);
 
 }
+
+async function reset() {
+    location.reload()
+}
+
+async function hide() {
+    let hideButton = document.getElementById("hide");
+    let rules = document.getElementById("showRules")
+    hideButton.className = "inactive";
+    rules.className = "inactive";
+}
+
+async function rules() {
+    let hideButton = document.getElementById("hide");
+    let rules = document.getElementById("showRules")
+    hideButton.className = "active";
+    rules.className = "active";
+}
+
+async function play() {
+    let endpoint = "app/" + whichGame
+    const url = document.baseURI+endpoint
+    document.getElementById("warning").innerHTML = ""
+
+    if (playerChoice === null) {
+
+        try{
+        await fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+
+                .then(function(result){
+                    console.log(result)
+                    document.getElementById("player").innerHTML = "Your Move: " + result.player;
+                })
+    } catch (error) {
+        document.getElementById("warning").innerHTML = "Please select a game and try again."
+    }
+}
+
+    else {
+        await playOpponent(url);
+    }
+
+    let section = document.getElementById("results")
+    section.className = "active"
+
+
+}
+
+async function playOpponent(url) {
+    let newUrl = url + "/play/" + String(playerChoice)
+
+    console.log("playOpponent")
+
+    await fetch(newUrl)
+        .then(function(response) {
+            return response.json();
+        })
+
+            .then(function(result){
+                console.log(result)
+                document.getElementById("player").innerHTML = "Your Move: " + result.player;
+                document.getElementById("computer").innerHTML = "Your opponent: " + result.opponent;
+                document.getElementById("gameResults").innerHTML = "Game Result: " + result.result;
+            })
+
+
+}
+
+
+
+
+
+// const endpoint = "app/"
+//     const url = document.baseURI+endpoint
+//     await fetch(url)
+//         .then(function(response) {
+//             return response.text();
+//         })
+//             .then(function(result){
+//                 console.log(result);
+//             })
 
