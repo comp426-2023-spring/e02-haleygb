@@ -8,24 +8,20 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
-
-    <div class=container>
+    <div class="container">
         <div id="mainPage" class="active">
             <h1>Play Rock Paper Scissors or Rock Paper Scissors Lizard Spock!</h1>
             <h3>Choose which game you would like to play:</h3>
             <p>Click "Game Rules" for more information.</p>
-            <input type="radio" id="playRPS" name = "game" onclick="chooseRPS()">
+            <input type="radio" id="playRPS" name="game" onclick="chooseRPS()">
             <label for="playRPS">Play Rock Paper Scissors!</label>
             <br>
             <br>
-            <input type = "radio" id="playRPSLS" name = "game" onclick="chooseRPSLS()">
+            <input type ="radio" id="playRPSLS" name="game" onclick="chooseRPSLS()">
             <label for="playRPSLS">Play Rock Paper Scissors Lizard Spock!</label>
         </div>
-
-
         <div id="opponentRPSLS" class="inactive">
             <h3>Would you like to play with an opponent?</h3>
             <p>If so, choose a shot below and play against the computer. 
@@ -40,7 +36,7 @@
                 <option value="spock">Spock</option>
             </select>
             <!-- <input type="submit" value="Lock In Opponent"> -->
-            <button id="submitOpponent" onclick="setOpponent()">Lock In Your Move</button>
+            <button type="button" id="submitOpponent" onclick="setOpponent()">Lock In Your Move</button>
         </div>
 
         <div id="opponentRPS" class="inactive">
@@ -55,7 +51,7 @@
                 <option value="paper">Paper</option>
                 <option value="scissors">Scissors</option>
             </select>
-            <button id="submitOpponent2" onclick="setOpponent2()">Lock In Your Move</button>
+            <button type="button" id="submitOpponent2" onclick="setOpponent2()">Lock In Your Move</button>
             <!-- <input type="submit" value="Lock In Opponent"> -->
         </div>
 
@@ -63,9 +59,9 @@
         <br>
         <br>
         <nav>
-            <button id="reset" onclick="reset()" class="active">Reset</button>
-            <button id="play" onclick="play()" class = "active">Play Game</button>
-            <button id="rules" onclick="rules()" class = "active">Game Rules</button>
+            <button type="button" id="reset" onclick="reset()" class="active">Reset</button>
+            <button type="button" id="play" onclick="play()" class = "active">Play Game</button>
+            <button type="button" id="rules" onclick="rules()" class = "active">Game Rules</button>
         </nav>
 
 
@@ -91,7 +87,7 @@
                 - Rock CRUSHES Scissors
             </div>
         </div>
-            <button id="hide" onclick="hide()" class="inactive">Hide</button>
+            <button type="button" id="hide" onclick="hide()" class="inactive">Hide</button>
         </div>
 
 
