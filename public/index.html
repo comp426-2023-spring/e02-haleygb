@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
@@ -26,7 +26,6 @@
             <h3>Would you like to play with an opponent?</h3>
             <p>If so, choose a shot below and play against the computer. 
                 <br> Don't forget to lock in your move before playing!</p>
-
             <label for="opponents">Choose your shot:</label>
             <select name="opponents" id="opponents">
                 <option value="rock">Rock</option>
@@ -38,15 +37,13 @@
             <!-- <input type="submit" value="Lock In Opponent"> -->
             <button type="button" id="submitOpponent" onclick="setOpponent()">Lock In Your Move</button>
         </div>
-
         <div id="opponentRPS" class="inactive">
             <h3>Would you like to play with an opponent?</h3>
             <p>If so, choose a shot below and play against the computer.
                 <br> Don't forget to lock in your move before playing!
             </p>
-
             <label for="opponents2">Choose your shot:</label>
-            <select name="opponents" id="opponents2">
+            <select name="opponents2" id="opponents2">
                 <option value="rock">Rock</option>
                 <option value="paper">Paper</option>
                 <option value="scissors">Scissors</option>
@@ -54,17 +51,14 @@
             <button type="button" id="submitOpponent2" onclick="setOpponent2()">Lock In Your Move</button>
             <!-- <input type="submit" value="Lock In Opponent"> -->
         </div>
-
         <br>
         <br>
         <br>
         <nav>
             <button type="button" id="reset" onclick="reset()" class="active">Reset</button>
-            <button type="button" id="play" onclick="play()" class = "active">Play Game</button>
-            <button type="button" id="rules" onclick="rules()" class = "active">Game Rules</button>
+            <button type="button" id="play" onclick="play()" class="active">Play Game</button>
+            <button type="button" id="rules" onclick="rules()" class="active">Game Rules</button>
         </nav>
-
-
         <div id="showRules" class="inactive">
             <div class="row">
             <div class="column">
@@ -89,18 +83,13 @@
         </div>
             <button type="button" id="hide" onclick="hide()" class="inactive">Hide</button>
         </div>
-
-
         <div id="results" class="inactive">
         <h2>Results</h2>
-
           <p id="player"></p>
           <p id="computer"></p>
           <p id="gameResults"></p>
           <p id="warning"></p>
-
         </div>
     </div>
-
     </body>
 </html>
